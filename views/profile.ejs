@@ -1,0 +1,70 @@
+<div class="main">
+            
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    
+                    <div class="signup-form">
+                        <h2 class="form-title">Profile</h2>
+                        <% include messages %>
+                        <form action = '/dashboard/profile' method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" value="<%= typeof name != 'undefined' ? name : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email" value="<%= typeof email != 'undefined' ? email : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="number"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="text" name="number" id="number" placeholder="Your Number" value="<%= typeof number != 'undefined' ? number : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="year"><i class="zmdi zmdi-calendar"></i></label>
+                                <input type="text" name="year" id="year" placeholder="Year" value="<%= typeof year != 'undefined' ? year : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="branch"><i class="zmdi zmdi-assignment"></i></label>
+                                <input type="text" name="branch" id="branch" placeholder="Branch" value="<%= typeof branch != 'undefined' ? branch : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="sem"><i class="zmdi zmdi-layers"></i></label>
+                                <input type="text" name="sem" id="sem" placeholder="Semester" value="<%= typeof sem != 'undefined' ? sem : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="password" placeholder="Password" value="<%= typeof password != 'undefined' ? password : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password2"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="password2" id="password2" placeholder="Repeat your password" value="<%= typeof password2 != 'undefined' ? password2 : '' %>"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="check" id="check" class="agree-term" />
+                                <label for="check" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <!-- <div class="form-group form-button">
+                                <button type="submit"  name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div> -->
+                            <!-- <button type="submit" class="btn btn-primary btn-block">
+                                Register
+                            </button> -->
+                            <button type="submit" name="save" id="save" class="form-submit" value="Save">
+                                Save
+                            </button>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                            <a href="/dashboard" id="back-btn"><h1><--Back To Dashboard<h1></a>
+                        <figure><img src="log/images/signup-image.jpg" alt="sing up image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    
